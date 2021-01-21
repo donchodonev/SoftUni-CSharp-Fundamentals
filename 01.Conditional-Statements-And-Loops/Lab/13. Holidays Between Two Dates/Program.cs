@@ -22,7 +22,6 @@ namespace _13._Holidays_Between_Two_Dates
                     holidaysCount++; 
                 }
             }
-
             Console.WriteLine(holidaysCount);
         }
     }
