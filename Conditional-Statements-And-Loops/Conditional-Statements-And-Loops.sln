@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Strong number", "06. St
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Vending Machine", "07. Vending Machine\07. Vending Machine.csproj", "{003F24A1-9B2A-46F6-B10C-E5D422051D86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Triangle of Numbers", "08. Triangle of Numbers\08. Triangle of Numbers.csproj", "{8F16EFD2-FC31-4F73-9AF3-9E1C6DC2A25F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Triangle of Numbers", "08. Triangle of Numbers\08. Triangle of Numbers.csproj", "{8F16EFD2-FC31-4F73-9AF3-9E1C6DC2A25F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Padawan Equipment", "09. Padawan Equipment\09. Padawan Equipment.csproj", "{28E4DEE7-FBB4-4E82-AFBE-1AFCC6BE89B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Padawan Equipment", "09. Padawan Equipment\09. Padawan Equipment.csproj", "{28E4DEE7-FBB4-4E82-AFBE-1AFCC6BE89B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Rage Expenses", "10. Rage Expenses\10. Rage Expenses.csproj", "{AF7273E8-43BE-432F-83DF-84C3A6457F58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{28E4DEE7-FBB4-4E82-AFBE-1AFCC6BE89B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28E4DEE7-FBB4-4E82-AFBE-1AFCC6BE89B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28E4DEE7-FBB4-4E82-AFBE-1AFCC6BE89B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF7273E8-43BE-432F-83DF-84C3A6457F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF7273E8-43BE-432F-83DF-84C3A6457F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF7273E8-43BE-432F-83DF-84C3A6457F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF7273E8-43BE-432F-83DF-84C3A6457F58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
