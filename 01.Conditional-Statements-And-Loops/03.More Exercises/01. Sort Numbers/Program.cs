@@ -13,7 +13,12 @@ namespace _01._Sort_Numbers
             int maxNum = Math.Max((Math.Max(num1, num2)),Math.Max(num1,num3));
             int minNum = Math.Min((Math.Min(num1, num2)), Math.Min(num1, num3));
 
+            //print max num
+
             Console.WriteLine(maxNum);
+
+            //print num between max and min
+
             if (num1 == num2 || num1 == num3) 
             {
                 Console.WriteLine(num1);
@@ -41,6 +46,7 @@ namespace _01._Sort_Numbers
                     Console.WriteLine(num3);
                 }
             }
+            //print minNum
             Console.WriteLine(minNum);
         }
     }
