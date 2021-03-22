@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_01._Integer_Operations</RootNamespace>
+    <RootNamespace>_05.Print_Part_Of_ASCII</RootNamespace>
   </PropertyGroup>
 
 </Project>
