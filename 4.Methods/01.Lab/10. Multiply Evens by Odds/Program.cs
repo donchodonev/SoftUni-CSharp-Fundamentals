@@ -20,9 +20,9 @@ namespace _10._Multiply_Evens_by_Odds
                 {
                     continue;
                 }
-                else if (Math.Abs(int.Parse(item.ToString())) % 2 == 0)
+                else if (int.Parse(item.ToString()) % 2 == 0)
                 {
-                    sumOfEvenDigits += Math.Abs(int.Parse(item.ToString()));
+                    sumOfEvenDigits += int.Parse(item.ToString());
                 } 
             }
 
@@ -40,9 +40,9 @@ namespace _10._Multiply_Evens_by_Odds
                 {
                     continue;
                 }
-                else if (Math.Abs(int.Parse(item.ToString())) % 2 != 0)
+                else if (int.Parse(item.ToString()) % 2 != 0)
                 {
-                    sumOfOddDigits += Math.Abs(int.Parse(item.ToString()));
+                    sumOfOddDigits += int.Parse(item.ToString());
                 }
             }
 
