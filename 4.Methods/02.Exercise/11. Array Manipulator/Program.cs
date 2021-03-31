@@ -1,196 +1,408 @@
 ﻿using System;
 using System.Linq;
+
 namespace _11._Array_Manipulator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int[] inputArray = Console.ReadLine()
+            int[] numbers = Console.ReadLine()
                 .Split()
                 .Select(int.Parse)
                 .ToArray();
 
-            string commandInput = Console.ReadLine();
+            string command = Console.ReadLine();
 
-            while (commandInput != "end")
+            if (command == "end")
             {
+                Console.WriteLine($"[{string.Join(", ", numbers)}]");
+            }
 
-                if (commandInput.Contains("exchange"))
+            while (command != "end")
+            {
+                string[] allCommands = command
+                .Split();
+
+                string mainCommand = allCommands[0];
+
+                if (mainCommand == "exchange")
                 {
-                    int arraySplitIndex = int.Parse(commandInput.Last().ToString());
-                    if (arraySplitIndex > inputArray.Length - 1)
+                    int index = int.Parse(allCommands[1]);
+
+                    if (index >= 0 && index <= numbers.Length - 1)
                     {
-                        Console.WriteLine("Invalid index");
+                        ExchangeArray(numbers, index);
                     }
                     else
                     {
-                        inputArray = ExchangePlaces(inputArray, arraySplitIndex);
+                        Console.WriteLine("Invalid index");
                     }
                 }
-
-                switch (commandInput)
+                else if (mainCommand == "max")
                 {
-                    case "max even":
-                        MaxEven(inputArray);
-                        break;
-                    case "max odd":
-                        MaxOdd(inputArray);
-                        break;
-                    case "min odd":
-                        MinOdd(inputArray);
-                        break;
-                    case "min even":
-                        MinEven(inputArray);
-                        break;
+                    string evenOrOdd = allCommands[1];
+
+                    Console.WriteLine(FindMaxEvenOrOdd(evenOrOdd, numbers));
+                }
+                else if (mainCommand == "min")
+                {
+                    string evenOrOdd = allCommands[1];
+                    Console.WriteLine(FindMinEvenOrOdd(evenOrOdd, numbers));
+                }
+                else if (mainCommand == "first")
+                {
+                    int countOfNumbers = int.Parse(allCommands[1]);
+                    string evenOrOdd = allCommands[2];
+                    PrintFirstEvenOrOdd(numbers, countOfNumbers, evenOrOdd);
+                }
+                else if (mainCommand == "last")
+                {
+                    int countOfNumbers = int.Parse(allCommands[1]);
+                    string evenOrOdd = allCommands[2];
+                    PrintLastEvenOrodd(numbers, countOfNumbers, evenOrOdd);
                 }
 
-                commandInput = Console.ReadLine();
-            }
-        }
+                command = Console.ReadLine();
 
-        static int[] ExchangePlaces(int[] intArray, int index)
-        {
-            int[] finishedArray = new int[intArray.Length];
-
-            int finishedArrayIndexToFill = 0;
-
-            for (int i = index + 1; i < intArray.Length; i++)
-            {
-                finishedArray[finishedArrayIndexToFill] = intArray[i];
-                finishedArrayIndexToFill++;
-
-            }
-
-            for (int v = 0; v < index + 1; v++)
-            {
-                finishedArray[finishedArrayIndexToFill] = intArray[v];
-                finishedArrayIndexToFill++;
-            }
-
-            return finishedArray;
-        }
-
-        static void MaxEven(int[] intArray)
-        {
-            int largestEvenNum = 0;
-            int indexOfLargestEvenNum = 0;
-            bool maxEvenExists = false;
-
-            for (int i = 0; i < intArray.Length; i++)
-            {
-                if (intArray[i] % 2 == 0)
+                if (command == "end")
                 {
-                    if (largestEvenNum <= intArray[i])
+                    Console.WriteLine($"[{string.Join(", ", numbers)}]");
+                }
+            }
+        }
+
+        static void ExchangeArray(int[] numbers, int index)
+        {
+            int[] temp = new int[index + 1];
+
+            for (int i = 0; i <= index; i++)
+            {
+                temp[i] = numbers[i]; 
+            }
+
+            for (int i = 0; i <= index; i++)
+            {
+                for (int k = 0; k < numbers.Length - 1; k++)
+                {
+                    numbers[k] = numbers[k + 1];
+                }
+            }
+
+            int counter3 = 0;
+
+            for (int i = numbers.Length - 1 - index; i < numbers.Length; i++)
+            {
+                numbers[i] = int.Parse(temp[counter3].ToString());
+                counter3++;
+            }
+
+        }
+
+        static string FindMaxEvenOrOdd(string evenOrOdd, int[] numbers)
+        {
+            if (evenOrOdd == "even")
+            {
+                int max = int.MinValue;
+                int indexPosition = -222;
+                bool check = false;
+
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    if (numbers[i] % 2 == 0)
                     {
-                        indexOfLargestEvenNum = i;
-                        maxEvenExists = true;
+                        if (numbers[i] >= max)
+                        {
+                            max = numbers[i];
+                            indexPosition = i;
+                            check = true;
+                        }
                     }
                 }
-            }
-
-            if (maxEvenExists)
-            {
-                Console.WriteLine(indexOfLargestEvenNum);
+                if (check)
+                {
+                    return indexPosition.ToString();
+                }
+                return "No matches";
             }
             else
             {
-                Console.WriteLine("No matches");
+                int max = int.MinValue;
+                int indexPosition = -222;
+                bool check = false;
+
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    if (numbers[i] % 2 != 0)
+                    {
+                        if (numbers[i] >= max)
+                        {
+                            max = numbers[i];
+                            indexPosition = i;
+                            check = true;
+                        }
+                    }
+                }
+                if (check)
+                {
+                    return indexPosition.ToString();
+                }
+
+                return "No matches";
             }
         }
 
-        static void MaxOdd(int[] intArray)
+        static string FindMinEvenOrOdd(string evenOrOdd, int[] numbers)
         {
-            int largestOddNum = 0;
-            int indexOfLargestOddNum = 0;
-            bool maxOddExists = false;
-
-            for (int i = 0; i < intArray.Length; i++)
+            if (evenOrOdd == "even")
             {
-                if (intArray[i] % 2 != 0)
+                int min = int.MaxValue;
+                int indexPosition = -222;
+                bool check = false;
+
+                for (int i = 0; i < numbers.Length; i++)
                 {
-
-                    if (largestOddNum <= intArray[i])
+                    if (numbers[i] % 2 == 0)
                     {
-                        indexOfLargestOddNum = i;
-                        largestOddNum = intArray[i];
+                        if (numbers[i] <= min)
+                        {
+                            min = numbers[i];
+                            indexPosition = i;
+                            check = true;
+                        }
                     }
-
-                    maxOddExists = true;
                 }
-            }
-
-            if (maxOddExists)
-            {
-                Console.WriteLine(indexOfLargestOddNum);
+                if (check)
+                {
+                    return indexPosition.ToString();
+                }
+                return "No matches";
             }
             else
             {
-                Console.WriteLine("No matches");
+                int min = int.MaxValue;
+                int indexPosition = -222;
+                bool check = false;
+
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    if (numbers[i] % 2 != 0)
+                    {
+                        if (numbers[i] <= min)
+                        {
+                            min = numbers[i];
+                            indexPosition = i;
+                            check = true;
+                        }
+                    }
+                }
+                if (check)
+                {
+                    return indexPosition.ToString();
+                }
+                return "No matches";
             }
         }
 
-        static void MinEven(int[] intArray)
-
+        static void PrintFirstEvenOrOdd(int[] numbers, int count, string evenOrOdd)
         {
+            int[] temp = new int[count];
+            int counter = 0;
+            int counterOfEvenDigits = 0;
+            int zeroDigitCounter = 0;
 
-            int smallestEvenNum = 0;
-            int indexOfSmallestEvenNum = 0;
-            bool minEvenExists = false;
-
-            for (int i = 0; i < intArray.Length; i++)
+            if (count > numbers.Length)
             {
-                if (intArray[i] % 2 == 0)
-                {
-                    if (smallestEvenNum >= intArray[i])
-                    {
-                        smallestEvenNum = intArray[i];
-                        indexOfSmallestEvenNum = i;
-                    }
-                    minEvenExists = true;
-                }
-            }
-
-            if (minEvenExists)
-            {
-                Console.WriteLine(indexOfSmallestEvenNum);
+                Console.WriteLine("Invalid count");
             }
             else
             {
-                Console.WriteLine("No matches");
+                if (evenOrOdd == "odd")
+                {
+
+                    for (int i = 0; i < numbers.Length; i++)
+                    {
+                        if (numbers[i] % 2 != 0)
+                        {
+                            temp[counter] = numbers[i];
+                            counter++;
+                            if (counter >= count)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                    PrintArrayWithoutZero(temp);
+
+                }
+                else
+                {
+                    for (int i = 0; i < numbers.Length; i++)
+                    {
+                        if (numbers[i] % 2 == 0)
+                        {
+                            if (numbers[i] == 0)
+                            {
+                                zeroDigitCounter++;
+                            }
+
+                            temp[counterOfEvenDigits] = numbers[i];
+                            counterOfEvenDigits++;
+
+                            if (counterOfEvenDigits >= count)
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    if (counterOfEvenDigits == 0)
+                    {
+                        Console.WriteLine("[]");
+                    }
+                    else
+                    {
+                        int fakeZeroCounter = 0 - zeroDigitCounter;
+
+                        for (int i = 0; i < temp.Length; i++)
+                        {
+                            if (temp[i] == 0)
+                            {
+                                fakeZeroCounter++;
+                            }
+                        }
+
+                        int[] finalArr = new int[temp.Length - fakeZeroCounter];
+
+                        for (int i = 0; i < finalArr.Length; i++)
+                        {
+                            finalArr[i] = temp[i];
+                        }
+
+                        Console.WriteLine($"[{string.Join(", ", finalArr)}]");
+                    }
+                }
             }
         }
 
-        static void MinOdd(int[] intArray)
-
+        static void PrintArrayWithoutZero(int[] temp)
         {
+            int counter1 = 0;
 
-            int smallestOddNum = 0;
-            int indexOfSmallestOddNum = 0;
-            bool minOddExists = false;
-
-            for (int i = 0; i < intArray.Length; i++)
+            for (int i = 0; i < temp.Length; i++)
             {
-                if (intArray[i] % 2 != 0)
+                if (temp[i] != 0)
                 {
-                    if (smallestOddNum >= intArray[i])
-                    {
-                        smallestOddNum = intArray[i];
-                        indexOfSmallestOddNum = i;
-                    }
-                    minOddExists = true;
+                    counter1++;
                 }
             }
 
-            if (minOddExists)
+            int[] newTemp = new int[counter1];
+            int counter2 = 0;
+
+            for (int i = 0; i < temp.Length; i++)
             {
-                Console.WriteLine(indexOfSmallestOddNum);
+                if (temp[i] != 0)
+                {
+                    newTemp[counter2] = temp[i];
+                    counter2++;
+                }
+            }
+
+            Console.WriteLine($"[{string.Join(", ", newTemp)}]");
+        }
+
+        static void PrintLastEvenOrodd(int[] numbers, int count, string evenOrOdd)
+        {
+            if (count > numbers.Length)
+            {
+                Console.WriteLine("Invalid count");
             }
             else
             {
-                Console.WriteLine("No matches");
+                if (evenOrOdd == "odd")
+                {
+                    int counter8 = 0;
+                    for (int j = 0; j < numbers.Length; j++)
+                    {
+                        if (numbers[j] % 2 != 0)
+                        {
+                            counter8++;
+                        }
+                    }
+
+                    int[] OddArr = new int[counter8];
+
+                    counter8 = 0;
+
+                    for (int k = 0; k < numbers.Length; k++)
+                    {
+                        if (numbers[k] % 2 != 0)
+                        {
+                            OddArr[counter8] = numbers[k];
+                            counter8++;
+                        }
+                    }
+
+                    if (count >= OddArr.Length)
+                    {
+                        Console.WriteLine($"[{string.Join(", ", OddArr)}]");
+                    }
+                    else
+                    {
+                        int[] temp = new int[count];
+
+                        for (int i = 0; i < count; i++)
+                        {
+                            temp[i] = OddArr[OddArr.Length - count + i];
+                        }
+
+                        PrintArrayWithoutZero(temp);
+                    }
+
+                }
+                else
+                {
+                    int counter8 = 0;
+
+                    for (int j = 0; j < numbers.Length; j++)
+                    {
+                        if (numbers[j] % 2 == 0)
+                        {
+                            counter8++;
+                        }
+                    }
+
+                    int[] evenArr = new int[counter8];
+
+                    counter8 = 0;
+
+                    for (int k = 0; k < numbers.Length; k++)
+                    {
+                        if (numbers[k] % 2 == 0)
+                        {
+                            evenArr[counter8] = numbers[k];
+                            counter8++;
+                        }
+                    }
+
+                    if (count >= evenArr.Length)
+                    {
+                        Console.WriteLine($"[{string.Join(", ", evenArr)}]");
+                    }
+                    else
+                    {
+                        int[] temp = new int[count];
+
+                        for (int i = 0; i < temp.Length; i++)
+                        {
+                            temp[i] = evenArr[evenArr.Length - count + i];
+                        }
+
+                        PrintArrayWithoutZero(temp);
+                    }
+                }
             }
         }
     }
 }
-
