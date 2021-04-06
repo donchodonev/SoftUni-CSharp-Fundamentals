@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Change List", "02. Chan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. House Party", "03. House Party\03. House Party.csproj", "{BBA54B7B-D016-4C51-B12E-E5A945CB9987}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. List Operations", "04. List Operations\04. List Operations.csproj", "{C9437BAB-991C-4389-AC9A-BBDAD5FB14C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BBA54B7B-D016-4C51-B12E-E5A945CB9987}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBA54B7B-D016-4C51-B12E-E5A945CB9987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBA54B7B-D016-4C51-B12E-E5A945CB9987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9437BAB-991C-4389-AC9A-BBDAD5FB14C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9437BAB-991C-4389-AC9A-BBDAD5FB14C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9437BAB-991C-4389-AC9A-BBDAD5FB14C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9437BAB-991C-4389-AC9A-BBDAD5FB14C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
