@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Train", "01. Train\01. Train.csproj", "{460612BD-5C17-4680-BAAA-DAC733460030}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Change List", "02. Change List\02. Change List.csproj", "{1E6B5A6F-74A2-43BF-B62E-DF2BC63208C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. House Party", "03. House Party\03. House Party.csproj", "{BBA54B7B-D016-4C51-B12E-E5A945CB9987}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{460612BD-5C17-4680-BAAA-DAC733460030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{460612BD-5C17-4680-BAAA-DAC733460030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{460612BD-5C17-4680-BAAA-DAC733460030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6B5A6F-74A2-43BF-B62E-DF2BC63208C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6B5A6F-74A2-43BF-B62E-DF2BC63208C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6B5A6F-74A2-43BF-B62E-DF2BC63208C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6B5A6F-74A2-43BF-B62E-DF2BC63208C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA54B7B-D016-4C51-B12E-E5A945CB9987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA54B7B-D016-4C51-B12E-E5A945CB9987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA54B7B-D016-4C51-B12E-E5A945CB9987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA54B7B-D016-4C51-B12E-E5A945CB9987}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
