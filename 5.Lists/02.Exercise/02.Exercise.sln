@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Append Arrays", "07. Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Anonymous Threat", "08. Anonymous Threat\08. Anonymous Threat.csproj", "{AD362255-503E-4811-9110-7C0FB9986EF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Pokemon Don't Go", "09. Pokemon Don't Go\09. Pokemon Don't Go.csproj", "{32437A07-6407-4814-9213-AC5289485555}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{AD362255-503E-4811-9110-7C0FB9986EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD362255-503E-4811-9110-7C0FB9986EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD362255-503E-4811-9110-7C0FB9986EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32437A07-6407-4814-9213-AC5289485555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32437A07-6407-4814-9213-AC5289485555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32437A07-6407-4814-9213-AC5289485555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32437A07-6407-4814-9213-AC5289485555}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

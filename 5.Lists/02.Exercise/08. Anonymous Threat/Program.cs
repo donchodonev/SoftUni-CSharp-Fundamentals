@@ -74,13 +74,14 @@ namespace _08._Anonymous_Threat
                 result.Add(substring.Substring(i, pieceToSplitTo));
             }
 
-            if (result[result.Count - 1].Length < result[result.Count - 1].Length)
-            {
-                result[result.Count - 2] += result[result.Count - 1];
-                result.RemoveAt(result.Count - 1);
-            }
 
-            else if (result[result.Count - 1].Length == result[result.Count - 2].Length && listOfStrings[elementIndex].Length % substringCount != 0)
+            //if the LENGTH of the last element is smaller or equal to the length of the 2nd to last number in the list
+            //AND
+            //if the length of the last element modulo of the count of partitions is an odd num 
+
+
+
+            if (result[result.Count - 1].Length <= result[result.Count - 2].Length && listOfStrings[elementIndex].Length % substringCount != 0)
             {
                 result[result.Count - 2] += result[result.Count - 1];
                 result.RemoveAt(result.Count - 1);
