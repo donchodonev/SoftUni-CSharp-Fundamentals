@@ -39,13 +39,13 @@ namespace _09._Pokemon_Don_t_Go
                 {
                     int removedIndexValue = distanceToPokemon[distanceToPokemon.Count-1];
 
+                    int firstIndexValue = distanceToPokemon[0];
+
                     sumOfAllRemovedElements += removedIndexValue;
 
                     distanceToPokemon.RemoveAt(distanceToPokemon.Count - 1);
 
-                    int firstIndexValue = distanceToPokemon[0];
-
-                    distanceToPokemon.Insert(distanceToPokemon.Count - 1, firstIndexValue);
+                    distanceToPokemon.Add(firstIndexValue);
 
                     distanceToPokemon = IncreaseOrDecreaseElementsWithoutIndex(removedIndexValue, distanceToPokemon);
                 }
@@ -54,6 +54,13 @@ namespace _09._Pokemon_Don_t_Go
                     sumOfAllRemovedElements += distanceToPokemon[index];
 
                     distanceToPokemon = IncreaseOrDecreaseElements(index, distanceToPokemon);
+                }
+
+
+                if (distanceToPokemon.Count == 0)
+                {
+                    Console.WriteLine(sumOfAllRemovedElements);
+                    break;
                 }
 
                 index = int.Parse(Console.ReadLine());
@@ -78,7 +85,6 @@ namespace _09._Pokemon_Don_t_Go
                 }
             }
 
-
             //get indexes of numbers greater than the removed number
 
             List<int> greaterToRemoved = new List<int>(15);
@@ -87,7 +93,7 @@ namespace _09._Pokemon_Don_t_Go
             {
                 if (distancesToPokemon[i] > indexNumValue)
                 {
-                    smallerOrEqualToRemoved.Add(i);
+                    greaterToRemoved.Add(i);
                 }
             }
 
@@ -114,22 +120,27 @@ namespace _09._Pokemon_Don_t_Go
 
             //get indexes of numbers smaller or equal to the removed number
 
-            List<int> smallerOrEqualToRemoved = distancesToPokemon.FindIndex(n => n <= indexNumValue)
-                .ToString()
-                .Split()
-                .Select(int.Parse)
-                .ToList();
+            List<int> smallerOrEqualToRemoved = new List<int>(15);
+
+            for (int i = 0; i < distancesToPokemon.Count; i++)
+            {
+                if (distancesToPokemon[i] <= indexNumValue)
+                {
+                    smallerOrEqualToRemoved.Add(i);
+                }
+            }
 
             //get indexes of numbers greater than the removed number
 
-            List<int> greaterToRemoved = distancesToPokemon.FindIndex(n => n > indexNumValue)
-                .ToString()
-                .Split()
-                .Select(int.Parse)
-                .ToList();
+            List<int> greaterToRemoved = new List<int>(15);
 
-            smallerOrEqualToRemoved.RemoveAll(n => n == -1); // remove invalid indexes
-            greaterToRemoved.RemoveAll(n => n == -1); //remove invalid indexes
+            for (int i = 0; i < distancesToPokemon.Count; i++)
+            {
+                if (distancesToPokemon[i] > indexNumValue)
+                {
+                    greaterToRemoved.Add(i);
+                }
+            }
 
             //iterate through the list and increase the values of all numbers smaller or equal than the removed one
 
@@ -143,8 +154,8 @@ namespace _09._Pokemon_Don_t_Go
             {
                 distancesToPokemon[item] -= indexNumValue;
             }
-            return distancesToPokemon;
 
+            return distancesToPokemon;
         }
     }
 }
