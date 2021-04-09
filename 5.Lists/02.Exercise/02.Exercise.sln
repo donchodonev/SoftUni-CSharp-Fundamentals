@@ -13,13 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. List Operations", "04. 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Bomb Numbers", "05. Bomb Numbers\05. Bomb Numbers.csproj", "{5470EA43-0EFA-4B91-9D3C-E1314BC81588}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Cards Game", "06. Cards Game\06. Cards Game.csproj", "{9CDF5F72-F297-4A92-BED0-9608979F0D6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Cards Game", "06. Cards Game\06. Cards Game.csproj", "{9CDF5F72-F297-4A92-BED0-9608979F0D6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Append Arrays", "07. Append Arrays\07. Append Arrays.csproj", "{CEC0EE2D-773C-4F06-9917-58CC4EC32DAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Append Arrays", "07. Append Arrays\07. Append Arrays.csproj", "{CEC0EE2D-773C-4F06-9917-58CC4EC32DAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Anonymous Threat", "08. Anonymous Threat\08. Anonymous Threat.csproj", "{AD362255-503E-4811-9110-7C0FB9986EF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Anonymous Threat", "08. Anonymous Threat\08. Anonymous Threat.csproj", "{AD362255-503E-4811-9110-7C0FB9986EF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Pokemon Don't Go", "09. Pokemon Don't Go\09. Pokemon Don't Go.csproj", "{32437A07-6407-4814-9213-AC5289485555}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Pokemon Don't Go", "09. Pokemon Don't Go\09. Pokemon Don't Go.csproj", "{32437A07-6407-4814-9213-AC5289485555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. SoftUni Course Planning", "10. SoftUni Course Planning\10. SoftUni Course Planning.csproj", "{F29E700C-9E90-4380-90C4-EC120213627E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{32437A07-6407-4814-9213-AC5289485555}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32437A07-6407-4814-9213-AC5289485555}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32437A07-6407-4814-9213-AC5289485555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F29E700C-9E90-4380-90C4-EC120213627E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F29E700C-9E90-4380-90C4-EC120213627E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F29E700C-9E90-4380-90C4-EC120213627E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F29E700C-9E90-4380-90C4-EC120213627E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
