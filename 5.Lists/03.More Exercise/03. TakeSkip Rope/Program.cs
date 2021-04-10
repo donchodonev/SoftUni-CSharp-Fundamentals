@@ -43,21 +43,25 @@ namespace _03._TakeSkip_Rope
                     splitOdd.Add(digits[i]);
                 }
             }
+
             List<string> characters2 = new List<string>(30);
 
             string resultString = string.Empty;
 
             int splitValue = 0;
             int takeValue = 0;
+
             for (int i = 0; i < splitOdd.Count; i++)
 
             {
                 splitValue = splitOdd[i];
                 takeValue = takeEven[i];
 
-                characters2 = characters.Take(takeValue).ToList();
-                splitValue += takeValue;
-                characters = characters.Skip(splitValue).ToList();
+                characters2 = characters.Take(takeValue).ToList();//take what we need
+
+                splitValue += takeValue;//sum take index to split index
+
+                characters = characters.Skip(splitValue).ToList();//skip what we added plus what we don't want
 
                 foreach (var item in characters2)
                 {
