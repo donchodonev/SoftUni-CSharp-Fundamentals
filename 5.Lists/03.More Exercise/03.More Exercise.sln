@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Car Race", "02. Car Rac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. TakeSkip Rope", "03. TakeSkip Rope\03. TakeSkip Rope.csproj", "{C4E79984-0A1F-46AF-BFD0-AA62DC377255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Mixed up Lists", "04. Mixed up Lists\04. Mixed up Lists.csproj", "{BAFFA19F-2711-410E-94E0-5AF63F103DDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Mixed up Lists", "04. Mixed up Lists\04. Mixed up Lists.csproj", "{BAFFA19F-2711-410E-94E0-5AF63F103DDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Drum Set", "05. Drum Set\05. Drum Set.csproj", "{E2653F48-052F-4808-85A0-EB790F83A67D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{BAFFA19F-2711-410E-94E0-5AF63F103DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAFFA19F-2711-410E-94E0-5AF63F103DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAFFA19F-2711-410E-94E0-5AF63F103DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2653F48-052F-4808-85A0-EB790F83A67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2653F48-052F-4808-85A0-EB790F83A67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2653F48-052F-4808-85A0-EB790F83A67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2653F48-052F-4808-85A0-EB790F83A67D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
