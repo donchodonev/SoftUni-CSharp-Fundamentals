@@ -12,7 +12,7 @@ namespace _05._Drum_Set
             double savings = double.Parse(Console.ReadLine());
 
             List<int> initialSet = Console.ReadLine()
-                .Split(' ',StringSplitOptions.)
+                .Split(' ',StringSplitOptions)
                 .Select(int.Parse)
                 .ToList();
 
@@ -54,6 +54,8 @@ namespace _05._Drum_Set
                         {
                             initialSet.RemoveAt(i);
                             indexOfBrokenDrum.RemoveAt(indexOfBrokenDrum.Count - 1);
+
+                                i--;
 
                             break;
                         }
