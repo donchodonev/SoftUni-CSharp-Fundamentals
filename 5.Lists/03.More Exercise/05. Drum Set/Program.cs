@@ -12,7 +12,7 @@ namespace _05._Drum_Set
             double savings = double.Parse(Console.ReadLine());
 
             List<int> initialSet = Console.ReadLine()
-                .Split(' ',StringSplitOptions)
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToList();
 
@@ -55,18 +55,22 @@ namespace _05._Drum_Set
                             initialSet.RemoveAt(i);
                             indexOfBrokenDrum.RemoveAt(indexOfBrokenDrum.Count - 1);
 
+                            if (i != currentSet.Count - 1)
+                            {
                                 i--;
 
-                            break;
+
+                                break;
+                            }
                         }
                     }
+
+                    input = Console.ReadLine();
                 }
 
-                input = Console.ReadLine();
+                Console.WriteLine(string.Join(' ', currentSet));
+                Console.WriteLine($"Gabsy has {savings:F2}lv.");
             }
-
-            Console.WriteLine(string.Join(' ', currentSet));
-            Console.WriteLine($"Gabsy has {savings:F2}lv.");
         }
     }
 }
