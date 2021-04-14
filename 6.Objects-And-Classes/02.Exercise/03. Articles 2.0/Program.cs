@@ -17,18 +17,6 @@ namespace _03._Articles_2._0
         public string Content { get; set; }
         public string Author { get; set; }
 
-        public void Edit(string content)
-        {
-            Content = content;
-        }
-        public void ChangeAuthor(string author)
-        {
-            Author = author;
-        }
-        public void Rename(string title)
-        {
-            Title = title;
-        }
         public override string ToString()
         {
             return $"{Title} - {Content}: {Author}";
@@ -38,36 +26,44 @@ namespace _03._Articles_2._0
     {
         static void Main(string[] args)
         {
-            List<string> input = Console.ReadLine()
-                .Split(", ")
-                .ToList();
-
-            string title = input[0];
-            string content = input[1];
-            string author = input[2];
-
-            Article article = new Article(title, content, author);
-
             int n = int.Parse(Console.ReadLine());
+
+            List <Article> articles = new List<Article>(5);
 
             for (int i = 0; i < n; i++)
             {
-                string[] command = Console.ReadLine().Split(": ").ToArray();
+                List<string> input = Console.ReadLine()
+                        .Split(", ")
+                        .ToList();
 
-                if (command[0] == "Edit")
-                {
-                    article.Edit(command[1]);
-                }
-                else if (command[0] == "ChangeAuthor")
-                {
-                    article.ChangeAuthor(command[1]);
-                }
-                else if (command[0] == "Rename")
-                {
-                    article.Rename(command[1]);
-                }
+                string title = input[0];
+                string content = input[1];
+                string author = input[2];
+
+                Article article = new Article(title, content, author);
+
+                articles.Add(article);
             }
-            Console.WriteLine(article.ToString());
+
+            string sortType = Console.ReadLine();
+
+            if (sortType == "title")
+            {
+                articles = articles.OrderBy(x => x.Title).ToList();
+            }
+            else if (sortType == "content")
+            {
+                articles = articles.OrderBy(x => x.Content).ToList();
+            }
+            else
+            {
+                articles = articles.OrderBy(x => x.Author).ToList();
+            }
+
+            foreach (var item in articles)
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
     }
 }
