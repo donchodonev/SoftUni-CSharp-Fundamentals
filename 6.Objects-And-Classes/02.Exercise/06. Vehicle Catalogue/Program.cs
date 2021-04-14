@@ -8,10 +8,10 @@ namespace _06._Vehicle_Catalogue
     {
         public Car(string model, string color, int hp)
         {
-            this.Model = model;
-            this.Color = color;
-            this.HP = hp;
-            this.Type = "Car";
+            Model = model;
+            Color = color;
+            HP = hp;
+            Type = "Car";
         }
         public string Model { get; set; }
         public string Color { get; set; }
@@ -23,10 +23,10 @@ namespace _06._Vehicle_Catalogue
     {
         public Truck(string model, string color, int hp)
         {
-            this.Model = model;
-            this.Color = color;
-            this.HP = hp;
-            this.Type = "Truck";
+            Model = model;
+            Color = color;
+            HP = hp;
+            Type = "Truck";
         }
         public string Model { get; set; }
         public string Color { get; set; }
@@ -69,60 +69,65 @@ namespace _06._Vehicle_Catalogue
             while (modelNameInfoRequest.Length == 1)
             {
                 string modelName = modelNameInfoRequest[0];
-                bool isTruck = trucks.Exists(x => x.Model == modelName);
-                bool isCar = cars.Exists(x => x.Model == modelName);
 
-                if (isTruck)
+
+                foreach (Truck truck in trucks)
                 {
-                    foreach (Truck truck in trucks)
+                    if (truck.Model == modelName)
                     {
-                        if (truck.Model == modelName)
-                        {
-                            Console.WriteLine($"Type: {truck.Type}");
-                            Console.WriteLine($"Model: {truck.Model}");
-                            Console.WriteLine($"Color: {truck.Color}");
-                            Console.WriteLine($"Horsepower: {truck.HP}");
-                        }
+                        Console.WriteLine($"Type: {truck.Type}");
+                        Console.WriteLine($"Model: {truck.Model}");
+                        Console.WriteLine($"Color: {truck.Color}");
+                        Console.WriteLine($"Horsepower: {truck.HP}");
                     }
                 }
-                else
+
+                foreach (Car car in cars)
                 {
-                    foreach (Car car in cars)
+                    if (car.Model == modelName)
                     {
-                        if (car.Model == modelName)
-                        {
-                            Console.WriteLine($"Type: {car.Type}");
-                            Console.WriteLine($"Model: {car.Model}");
-                            Console.WriteLine($"Color: {car.Color}");
-                            Console.WriteLine($"Horsepower: {car.HP}");
-                        }
+                        Console.WriteLine($"Type: {car.Type}");
+                        Console.WriteLine($"Model: {car.Model}");
+                        Console.WriteLine($"Color: {car.Color}");
+                        Console.WriteLine($"Horsepower: {car.HP}");
                     }
                 }
 
                 modelNameInfoRequest = Console.ReadLine().Split();
-
             }
+
 
             double totalCarHP = 0.0;
 
             double totalTruckHP = 0.0;
 
-            foreach (Car item in cars)
+            if (cars.Count > 0)
             {
-                totalCarHP += item.HP;
+                foreach (Car item in cars)
+                {
+                    totalCarHP += item.HP;
+                }
+                double averageCarHp = totalCarHP / cars.Count;
+                Console.WriteLine($"Cars have average horsepower of: {averageCarHp:F2}.");
+            }
+            else
+            {
+                Console.WriteLine($"Cars have average horsepower of: 0.00.");
             }
 
-            foreach (Truck item in trucks)
+            if (trucks.Count > 0)
             {
-                totalTruckHP += item.HP;
+                foreach (Truck item in trucks)
+                {
+                    totalTruckHP += item.HP;
+                }
+                double averageTruckHp = totalTruckHP / trucks.Count;
+                Console.WriteLine($"Trucks have average horsepower of: {averageTruckHp:F2}.");
             }
-
-            double averageCarHp = totalCarHP / cars.Count;
-
-            double averageTruckHp = totalTruckHP / trucks.Count;
-
-            Console.WriteLine($"Cars have average horsepower of: {averageCarHp:F2}.");
-            Console.WriteLine($"Trucks have average horsepower of: {averageTruckHp:F2}.");
+            else
+            {
+                Console.WriteLine($"Trucks have average horsepower of: 0.00.");
+            }
         }
     }
 }
