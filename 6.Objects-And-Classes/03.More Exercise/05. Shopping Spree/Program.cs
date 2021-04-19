@@ -87,7 +87,8 @@ namespace _05._Shopping_Spree
             {
                 string personName = commandArgs[0];
                 string productName = commandArgs[1];
-                people.Find(x => x.Name == personName).Buy(productName, products.Find(x => x.Name == productName).Price);
+                people.Find(x => x.Name == personName)
+                    .Buy(productName, products.Find(x => x.Name == productName).Price);
 
                 commandArgs = Console.ReadLine()
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -101,7 +102,7 @@ namespace _05._Shopping_Spree
                 }
                 else
                 {
-                    Console.WriteLine($"{person.Name} - {string.Join(", ",person.Products)}");
+                    Console.WriteLine($"{person.Name} - {string.Join(", ", person.Products)}");
                 }
             }
         }
