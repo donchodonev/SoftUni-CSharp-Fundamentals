@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Speed Racing", "03. Spe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Raw Data", "04. Raw Data\04. Raw Data.csproj", "{0A3EA161-B7A7-4CAC-898C-A7F8418ED2BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Shopping Spree", "05. Shopping Spree\05. Shopping Spree.csproj", "{700E4744-A4F2-4DD2-BB7F-AFD536FC4417}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0A3EA161-B7A7-4CAC-898C-A7F8418ED2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A3EA161-B7A7-4CAC-898C-A7F8418ED2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A3EA161-B7A7-4CAC-898C-A7F8418ED2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700E4744-A4F2-4DD2-BB7F-AFD536FC4417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700E4744-A4F2-4DD2-BB7F-AFD536FC4417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700E4744-A4F2-4DD2-BB7F-AFD536FC4417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700E4744-A4F2-4DD2-BB7F-AFD536FC4417}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
