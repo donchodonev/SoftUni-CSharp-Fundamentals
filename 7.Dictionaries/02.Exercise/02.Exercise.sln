@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Count Chars in a String", "01. Count Chars in a String\01. Count Chars in a String.csproj", "{172F5245-239A-47DD-9DA4-F5B27B27FE5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Count Chars in a String", "01. Count Chars in a String\01. Count Chars in a String.csproj", "{B1BE70F4-6D5A-48A9-95D0-A34D2633A643}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{172F5245-239A-47DD-9DA4-F5B27B27FE5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{172F5245-239A-47DD-9DA4-F5B27B27FE5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{172F5245-239A-47DD-9DA4-F5B27B27FE5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{172F5245-239A-47DD-9DA4-F5B27B27FE5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BE70F4-6D5A-48A9-95D0-A34D2633A643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BE70F4-6D5A-48A9-95D0-A34D2633A643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BE70F4-6D5A-48A9-95D0-A34D2633A643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BE70F4-6D5A-48A9-95D0-A34D2633A643}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7707EA49-1CA8-47E6-AE9E-E8F941E05303}
+		SolutionGuid = {07893193-821C-4C5F-B67E-35CE2F57D8A5}
 	EndGlobalSection
 EndGlobal
