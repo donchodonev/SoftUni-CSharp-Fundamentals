@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Count Chars in a String", "01. Count Chars in a String\01. Count Chars in a String.csproj", "{B1BE70F4-6D5A-48A9-95D0-A34D2633A643}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Count Chars in a String", "01. Count Chars in a String\01. Count Chars in a String.csproj", "{B1BE70F4-6D5A-48A9-95D0-A34D2633A643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. A Miner Task", "02. A Miner Task\02. A Miner Task.csproj", "{EA0871F4-72B2-4EAB-A0CE-455BDDF48F7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. A Miner Task", "02. A Miner Task\02. A Miner Task.csproj", "{EA0871F4-72B2-4EAB-A0CE-455BDDF48F7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Legendary Farming", "03. Legendary Farming\03. Legendary Farming.csproj", "{833BF68A-4571-46E9-87A6-ACFFB3D6F47E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Legendary Farming", "03. Legendary Farming\03. Legendary Farming.csproj", "{833BF68A-4571-46E9-87A6-ACFFB3D6F47E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Orders", "04. Orders\04. Orders.csproj", "{303DA272-FA42-42C9-91DE-1C290FC73818}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Orders", "04. Orders\04. Orders.csproj", "{303DA272-FA42-42C9-91DE-1C290FC73818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. SoftUni Parking", "05. SoftUni Parking\05. SoftUni Parking.csproj", "{BD273317-8B5C-4D32-8472-4AAA28BCF360}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. SoftUni Parking", "05. SoftUni Parking\05. SoftUni Parking.csproj", "{BD273317-8B5C-4D32-8472-4AAA28BCF360}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Courses", "06. Courses\06. Courses.csproj", "{A8C60922-567C-4DA0-AD3C-0CC39EB59CF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Courses", "06. Courses\06. Courses.csproj", "{A8C60922-567C-4DA0-AD3C-0CC39EB59CF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Student Academy", "07. Student Academy\07. Student Academy.csproj", "{8B568048-F183-477C-94BC-C17C2A1A0ED6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Student Academy", "07. Student Academy\07. Student Academy.csproj", "{8B568048-F183-477C-94BC-C17C2A1A0ED6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Company Users", "08. Company Users\08. Company Users.csproj", "{92673012-EA7E-405C-A559-C37A0BB0B972}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Company Users", "08. Company Users\08. Company Users.csproj", "{92673012-EA7E-405C-A559-C37A0BB0B972}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. ForceBook", "09. ForceBook\09. ForceBook.csproj", "{D98D775D-386B-4232-AC44-A98DCB0FE9B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. ForceBook", "09. ForceBook\09. ForceBook.csproj", "{D98D775D-386B-4232-AC44-A98DCB0FE9B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. SoftUni Exam Results", "10. SoftUni Exam Results\10. SoftUni Exam Results.csproj", "{FE349568-D9AD-4117-9399-E040D6356F85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{D98D775D-386B-4232-AC44-A98DCB0FE9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D98D775D-386B-4232-AC44-A98DCB0FE9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D98D775D-386B-4232-AC44-A98DCB0FE9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE349568-D9AD-4117-9399-E040D6356F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE349568-D9AD-4117-9399-E040D6356F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE349568-D9AD-4117-9399-E040D6356F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE349568-D9AD-4117-9399-E040D6356F85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
