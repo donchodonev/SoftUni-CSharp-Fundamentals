@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Ranking", "01. Ranking\01. Ranking.csproj", "{36346BD3-0DD0-4291-A135-85A65888AE0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Judge", "02. Judge\02. Judge.csproj", "{4B6E5EBE-3EF4-4DFF-950C-72AF21E9CBBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Judge", "02. Judge\02. Judge.csproj", "{4B6E5EBE-3EF4-4DFF-950C-72AF21E9CBBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. MOBA Challenger", "03. MOBA Challenger\03. MOBA Challenger.csproj", "{2B56B3F4-6502-410D-B8E8-20945B845088}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. MOBA Challenger", "03. MOBA Challenger\03. MOBA Challenger.csproj", "{2B56B3F4-6502-410D-B8E8-20945B845088}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Snowwhite", "04. Snowwhite\04. Snowwhite.csproj", "{A0BC881D-E843-46F8-9750-EF2D60ABF7B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Snowwhite", "04. Snowwhite\04. Snowwhite.csproj", "{A0BC881D-E843-46F8-9750-EF2D60ABF7B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Dragon Army", "05. Dragon Army\05. Dragon Army.csproj", "{36390832-616C-4DDE-8031-F9D6C47C91EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A0BC881D-E843-46F8-9750-EF2D60ABF7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0BC881D-E843-46F8-9750-EF2D60ABF7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0BC881D-E843-46F8-9750-EF2D60ABF7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36390832-616C-4DDE-8031-F9D6C47C91EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36390832-616C-4DDE-8031-F9D6C47C91EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36390832-616C-4DDE-8031-F9D6C47C91EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36390832-616C-4DDE-8031-F9D6C47C91EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
