@@ -24,32 +24,13 @@ namespace _05._Dragon_Army
                 int health = 0;
                 int armor = 0;
 
-                if (input[2] == "null")
-                {
-                    damage = 45;
-                }
-                else
-                {
-                    damage = int.Parse(input[2]);
-                }
-                //
-                if (input[3] == "null")
-                {
-                    health = 250;
-                }
-                else
-                {
-                    health = int.Parse(input[3]);
-                }
-                //
-                if (input[4] == "null")
-                {
-                    armor = 10;
-                }
-                else
-                {
-                    armor = int.Parse(input[4]);
-                }
+                // if true - stat is equal to input conversion
+                //otherwise stat is equal to default value
+
+                damage = int.TryParse(input[2], out damage) ? damage : 45;
+                health = int.TryParse(input[3], out health) ? health : 250;
+                armor = int.TryParse(input[4], out armor) ? armor : 10;
+
                 ////adding dragon
                 ///
 
