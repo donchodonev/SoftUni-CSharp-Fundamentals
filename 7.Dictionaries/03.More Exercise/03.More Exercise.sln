@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Snowwhite", "04. Snowwh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Dragon Army", "05. Dragon Army\05. Dragon Army.csproj", "{36390832-616C-4DDE-8031-F9D6C47C91EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snowwhite2", "Snowwhite2\Snowwhite2.csproj", "{F859EE0D-C811-485F-9C21-A13DDEDE8105}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{36390832-616C-4DDE-8031-F9D6C47C91EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36390832-616C-4DDE-8031-F9D6C47C91EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36390832-616C-4DDE-8031-F9D6C47C91EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F859EE0D-C811-485F-9C21-A13DDEDE8105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F859EE0D-C811-485F-9C21-A13DDEDE8105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F859EE0D-C811-485F-9C21-A13DDEDE8105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F859EE0D-C811-485F-9C21-A13DDEDE8105}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
