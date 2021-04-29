@@ -15,40 +15,28 @@ namespace _05._Digits__Letters_and_Other
 
             foreach (var symbol in input)
             {
-                while (char.IsDigit(symbol))
+                index = input.IndexOf(symbol);
+
+                if (char.IsDigit(symbol))
                 {
-                    index = input.IndexOf(symbol);
                     if (index != -1)
                     {
                         digits.Append(symbol.ToString());
-                        input = input.Remove(index,1);
-                        continue;
                     }
-                    break;
                 }
-                while (char.IsLetter(symbol))
+                if (char.IsLetter(symbol))
                 {
-                    index = input.IndexOf(symbol);
-
                     if (index != -1)
                     {
                         letters.Append(symbol.ToString());
-                        input = input.Remove(input.IndexOf(symbol),1);
-                        continue;
                     }
-                    break;
                 }
-                while (!char.IsLetterOrDigit(symbol))
+                if (!char.IsLetterOrDigit(symbol))
                 {
-                    index = input.IndexOf(symbol);
-
                     if (index != -1)
                     {
                         otherChars.Append(symbol.ToString());
-                        input = input.Remove(input.IndexOf(symbol),1);
-                        continue;
                     }
-                    break;
                 }
             }
             Console.WriteLine(digits);
