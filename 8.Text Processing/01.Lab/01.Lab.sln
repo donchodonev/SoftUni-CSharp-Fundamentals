@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Reverse Strings", "01. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Repeat Strings", "02. Repeat Strings\02. Repeat Strings.csproj", "{FB66B773-EA74-4065-9F7A-0554071755E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Substring", "03. Substring\03. Substring.csproj", "{433BA55E-7380-404F-AC97-B6BC84CADA12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FB66B773-EA74-4065-9F7A-0554071755E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB66B773-EA74-4065-9F7A-0554071755E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB66B773-EA74-4065-9F7A-0554071755E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433BA55E-7380-404F-AC97-B6BC84CADA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433BA55E-7380-404F-AC97-B6BC84CADA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433BA55E-7380-404F-AC97-B6BC84CADA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433BA55E-7380-404F-AC97-B6BC84CADA12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
