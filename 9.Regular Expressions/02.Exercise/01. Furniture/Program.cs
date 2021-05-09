@@ -41,25 +41,20 @@ namespace _01._Furniture
 
             while (input != "Purchase")
             {
-                MatchCollection validPurchase = Regex.Matches(input, pattern);
+                Match validPurchase = Regex.Match(input, pattern);
 
-                if (validPurchase.FirstOrDefault() != null)
+                if (validPurchase.Success)
                 {
-                    foreach (Match purchase in validPurchase)
-                    {
-                        string name = purchase.Groups["name"].Value;
-                        decimal price = decimal.Parse(purchase.Groups["price"].Value);
-                        int quantity = int.Parse(purchase.Groups["quantity"].Value);
+                    string name = validPurchase.Groups["name"].Value;
+                    decimal price = decimal.Parse(validPurchase.Groups["price"].Value);
+                    int quantity = int.Parse(validPurchase.Groups["quantity"].Value);
 
-                        if (quantity != 0)
-                        {
-                            orders.Add(new Order(name, price, quantity));
-                        }
+                    if (quantity != 0)
+                    {
+                        orders.Add(new Order(name, price, quantity));
                     }
                 }
-
                 input = Console.ReadLine();
-
             }
 
             Console.WriteLine("Bought furniture:");
