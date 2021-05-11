@@ -5,119 +5,101 @@ using System.Linq;
 
 namespace _1._Winning_Ticket
 {
-
-    class Ticket
-    {
-        public Ticket(char symbol, int lengthOfMatch)
-        {
-            Symbol = symbol;
-            LengthOfMatch += lengthOfMatch;
-        }
-        public char Symbol { get; set; }
-        public int LengthOfMatch { get; set; }
-        public bool isMatch { get; set; }
-        public bool isJackpot { get; set; }
-    }
-
-
-
     class Program
     {
-        public static Ticket CheckMatch(Ticket ticket)
-        {
-            Ticket currentTicket = ticket;
-
-            if (ticket.LengthOfMatch / 2 >= 6)
-            {
-                currentTicket.isMatch = true;
-            }
-            if (ticket.LengthOfMatch / 2 == 10)
-            {
-                currentTicket.isMatch = true;
-                currentTicket.isJackpot = true;
-            }
-
-            return currentTicket; ;
-        }
-
         static void Main(string[] args)
         {
-            List<Ticket> allTickets = new List<Ticket>();
-
-            string pattern = @"([\@#$^]{6,10})";
+            string pattern = @"[\@#$^]{6,10}";
 
             string[] tickets = Console.ReadLine()
                 .Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            foreach (var ticket in tickets)
+            foreach (var t in tickets)
             {
-                string firstHalf = string.Empty;
-                string secondHalf = string.Empty;
+                Match ticket = Regex.Match(t, pattern);
 
-                //check length to see if ticket is valid
-
-                if (ticket.Length == 20)
-                {
-                    firstHalf = ticket.Substring(0, 10);
-                    secondHalf = ticket.Substring(10, 10);
-                }
-                else
+                if (t.Length != 20)
                 {
                     Console.WriteLine("invalid ticket");
                     continue;
                 }
 
-                Match fHalfCheck = Regex.Match(firstHalf, pattern);
-                Match sHalfCheck = Regex.Match(secondHalf, pattern);
+                string leftSide = t.Substring(0, 10);
+                string rightSide = t.Substring(10, 10);
 
-                Dictionary<char, Ticket> charCount = new Dictionary<char, Ticket>();
+                Match leftSideMatch = Regex.Match(leftSide, pattern);
+                Match rightSideMatch = Regex.Match(rightSide, pattern);
 
-                foreach (var character in fHalfCheck.ToString())
+                if (!leftSideMatch.Success || !rightSideMatch.Success)
                 {
-                    if (charCount.ContainsKey(character))
+                    Console.WriteLine($"ticket \"{t}\" - no match");
+                    continue;
+                }
+
+                Dictionary<char, int> leftSideCharCounter = new Dictionary<char, int>();
+                Dictionary<char, int> rightSideCharCounter = new Dictionary<char, int>();
+
+                foreach (var character in leftSideMatch.Value)
+                {
+                    if (leftSideCharCounter.ContainsKey(character))
                     {
-                        charCount[character].Symbol = character;
-                        charCount[character].LengthOfMatch++;
+                        leftSideCharCounter[character]++;
                     }
                     else
                     {
-                        charCount.Add(character, new Ticket(character, 1));
+                        leftSideCharCounter.Add(character, 1);
                     }
                 }
 
-                foreach (var character in sHalfCheck.ToString())
+                foreach (var character in rightSideMatch.Value)
                 {
-                    if (charCount.ContainsKey(character))
+                    if (rightSideCharCounter.ContainsKey(character))
                     {
-                        charCount[character].Symbol = character;
-                        charCount[character].LengthOfMatch++;
+                        rightSideCharCounter[character]++;
                     }
                     else
                     {
-                        charCount.Add(character, new Ticket(character, 1));
+                        rightSideCharCounter.Add(character, 1);
                     }
                 }
 
-                if (charCount.Count > 0)
+                //sort by count
+
+                leftSideCharCounter = leftSideCharCounter
+                    .OrderByDescending(x => x.Value)
+                    .ToDictionary(x => x.Key, y => y.Value);
+
+                rightSideCharCounter = rightSideCharCounter
+                    .OrderByDescending(x => x.Value)
+                    .ToDictionary(x => x.Key, y => y.Value);
+
+                //get char symbol and it's count from each side of the string
+
+                char leftSideSymbol = leftSideCharCounter.Keys.First();
+                int leftSideSymbolCount = leftSideCharCounter.Values.First();
+
+                char rightSideSymbol = rightSideCharCounter.Keys.First();
+                int rightSideSymbolCount = rightSideCharCounter.Values.First();
+
+                int minCount = Math.Min(leftSideSymbolCount, rightSideSymbolCount);
+
+                //print
+
+                if (leftSideSymbol == rightSideSymbol)
                 {
-                    charCount = charCount.OrderByDescending(x => x.Value.LengthOfMatch).ToDictionary(x => x.Key, y => y.Value);
-
-                    Ticket winningTicket = charCount.ElementAt(0).Value;
-
-                    winningTicket = CheckMatch(winningTicket);
-
-                    if (winningTicket.isJackpot)
+                    if (minCount >= 6 && minCount <= 9)
                     {
-                        Console.WriteLine($"ticket \"{ticket}\" - 10{winningTicket.Symbol} Jackpot!");
+                        Console.WriteLine($"ticket \"{t}\" - {minCount}{rightSideSymbol}");
                     }
-                    else
+                    else if (minCount == 10)
                     {
-                        Console.WriteLine($"ticket \"{ticket}\" - {winningTicket.LengthOfMatch / 2}{winningTicket.Symbol}");
+                        Console.WriteLine($"ticket \"{t}\" - {minCount}{rightSideSymbol} Jackpot!");
                     }
                 }
                 else
                 {
-                    Console.WriteLine($"ticket \"{ticket}\" - no match");
+                    Console.WriteLine($"ticket \"{t}\" - no match");
+                    continue;
                 }
             }
         }
