@@ -18,7 +18,7 @@ namespace _3._Post_Office
 
             Regex colonSeparatedNums = new Regex(@"(?<ascii>\d\d):(?<length>\d\d)");
 
-            Regex filteredWords = new Regex(@"\b [A-Z][^ ]+");
+            Regex filteredWords = new Regex(@"\b[A-Z][^ ]+\b ?");
 
             char[] capitalLettersArray = capitalLetters
                 .Match(input[0]).Value
@@ -41,7 +41,7 @@ namespace _3._Post_Office
 
             string[] words = filteredWords
                 .Matches(input[2])
-                .Select(x => x.Value.TrimStart(' '))
+                .Select(x => x.Value.Trim(' '))
                 .ToArray();
 
             for (int i = 0; i < capitalLettersArray.Length; i++)
