@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-namespace _03._Rounding_Numbers
+namespace Rounding_Numbers
 {
     class Program
     {
@@ -11,19 +11,12 @@ namespace _03._Rounding_Numbers
                 .Select(double.Parse)
                 .ToArray();
 
-            double[] roundedNumbers = new double[numbers.Length];
-
             for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i] == 0 || numbers[i] == -0)
-                {
-                    roundedNumbers[i] = 0;
-                }
-                else
-                {
-                    roundedNumbers[i] = Math.Round(numbers[i], MidpointRounding.AwayFromZero);
-                }
-                Console.WriteLine($"{numbers[i]} => {roundedNumbers[i]}");
+                double num = numbers[i];
+                double roundedNumber = Math.Round(num, MidpointRounding.AwayFromZero);
+
+                Console.WriteLine($"{Convert.ToDecimal(num)} => {Convert.ToDecimal(roundedNumber)}");
             }
         }
     }
